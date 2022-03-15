@@ -46,7 +46,7 @@ void createNewYear(Year* &pYear, string* yearName, int add) {
 	if (add)
 		fout.close();
 
-	string dirD = "C:\\GitHub\\CS162FinalProject\\Data\\";
+	string dirD = "C:\\GitHub\\Final-project-of-group-6\\datafile\\";
 	string c = "";
 	strcat(c, "mkdir ");
 	strcat(c, dirD);
