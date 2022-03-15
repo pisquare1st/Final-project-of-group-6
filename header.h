@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <fstream>
+#include <string>
+#include <cstring>
 using namespace std;
 
 struct date;
@@ -19,9 +21,9 @@ struct date{
 };
 
 struct student{
-    char *id;
-    char *name;
-    char *Class;
+    string id;
+    string name;
+    string Class;
     int gender; // 0 is female, 1 is male
     date dob;
     course *pCourse = nullptr;
@@ -35,20 +37,20 @@ struct scoreboard{
 };
 
 struct CLASS{
-    char *nameClass;
+    string nameClass;
     student *pStudentHead = nullptr;
     CLASS *pClassNext = nullptr;
 };
 
 struct Year{
-    char *nameYear;
+    string nameYear;
     CLASS *pClassHead = nullptr;
     semester *psemHead = nullptr;
     Year *pYearNext = nullptr;
 };
 
 struct semester{
-    char *nameSemester;
+    string nameSemester;
     date startDate, endDate;
     date regStart, regEnd; // date of registration
     course *pCourseHead = nullptr;
@@ -57,17 +59,17 @@ struct semester{
 
 struct perform{
     //day
-    char *d1;
-    char *d2;
+    string d1;
+    string d2;
     // shift
-    char *s1;
-    char *s2;
+    string s1;
+    string s2;
 };
 
 struct course{
-    char *IDcourse;
-    char *NAMEcourse;
-    char *courseSemester;
+    string IDcourse;
+    string NAMEcourse;
+    string courseSemester;
     int maxStudent;
     int sumCredit;
     perform performDate;
