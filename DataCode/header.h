@@ -78,6 +78,9 @@ struct course{
     course *pCourseNext = nullptr;
 };
 
-
+struct account{
+    string username;
+    string password;
+};
 #endif
 
